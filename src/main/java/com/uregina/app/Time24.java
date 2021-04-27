@@ -55,7 +55,12 @@ public class Time24
 		if(am_pm == AmPm.pm)
 			hours+=12;
 
-		time = new Time (hours,minutes);
+		try {
+			time = new Time24 (hours,minutes);
+		} catch (InvalidTimeException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		// End of your code
 		return time;
 	}

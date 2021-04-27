@@ -63,7 +63,19 @@ public class Ticket {
 		int flightTime=0;
 		
 		for(int i=0;i<ticket.size();i++){
-			flightTime += ticket.get(i).calculateFlightTime();
+			
+				
+				try {
+					flightTime += ticket.get(i).calculateFlightTime();
+				} catch (MoreThanOneDayException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} catch (NegativeTimeException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+
+			
 		}
 
 
@@ -75,7 +87,15 @@ public class Ticket {
 
 		for(int i=0;i<ticket.size() -1;i++){
 		
-			layoverTime += Flight.calculateLayoverTime(ticket.get(i), ticket.get(i+1));
+			try {
+				layoverTime += Flight.calculateLayoverTime(ticket.get(i), ticket.get(i+1));
+			} catch (MoreThanOneDayException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (NegativeTimeException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 
 		if (layoverTime > maxLayoverTime)

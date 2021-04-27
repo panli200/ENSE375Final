@@ -1,5 +1,7 @@
 package com.uregina.app;
 
+import javax.management.monitor.MonitorSettingException;
+
 import com.uregina.exceptions.*;
 
 /**
@@ -51,20 +53,17 @@ public class DateTime
 	{
 		int diff=0;
 		//Todo: add your code here
-		try{
+		
 
-			if(d1.getDate().equals(d2.getDate()))
-
-				diff = Time12.subtract(d1.getTime(), d2.getTime());
+			if(!Date.equal(d1.getDate(),d2.getDate()))
+				throw new MonitorSettingException();
 			
-			else if(d1.nextDate().equals(d2.getDate()))
+			else 
 
-				diff = Time12.subtract(d1.getTime(), d2.getTime()) + 24*60;
+				diff = Time12.subtract(d1.getTime(), d2.getTime()) ;
 					 
-		}
-		catch(MoreThanOneDayException e){
-			e.printStackTrace();
-		}
+		
+
 		//end of your code
 		return diff;
 	}
