@@ -13,4 +13,11 @@ public class Time24Test {
         String timeString = time24.toString();
         assertEquals("10:30",timeString  );
     }
+
+    @Test
+    public void pmGetDateCorrect(){
+        Time24 time24 = Time24.toTime24(10, 30, AmPm.pm);
+        String timeString = time24.toString();
+        assertEquals("22:30",timeString  );
+    }
 }
