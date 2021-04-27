@@ -25,6 +25,6 @@ public class Time24Test {
     public void pm12GetDateCorrect(){
         Time24 time24 = Time24.toTime24(12, 30, AmPm.am);
         String timeString = time24.toString();
-        assertEquals("00:30",timeString  );
+        assertEquals("0:30",timeString  );
     }
 }
