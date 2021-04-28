@@ -1,9 +1,6 @@
 package com.uregina.app;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotEquals;
-
-
 
 import com.uregina.exceptions.InvalidDateException;
 

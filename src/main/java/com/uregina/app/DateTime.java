@@ -54,15 +54,12 @@ public class DateTime
 		int diff=0;
 		//Todo: add your code here
 		
-
 			if(!Date.equal(d1.getDate(),d2.getDate()))
 				throw new MonitorSettingException();
 			
 			else 
 
-				diff = Time12.subtract(d1.getTime(), d2.getTime()) ;
-					 
-		
+				diff = Time12.subtract(d1.getTime(), d2.getTime()) ;				 	
 
 		//end of your code
 		return diff;
