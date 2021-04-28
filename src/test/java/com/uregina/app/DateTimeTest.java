@@ -20,7 +20,7 @@ public class DateTimeTest {
         Time12 t2 = new Time12(10, 30, AmPm.am); 
         DateTime dateTime2 = new DateTime(d2,t2);
 
-        assertEquals(dateTime1, dateTime2);
+        assertEquals(dateTime1.toString(), dateTime2.toString());
     }
 
 
