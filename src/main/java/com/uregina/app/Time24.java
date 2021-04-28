@@ -49,7 +49,7 @@ public class Time24
 	{
 		Time24 time=null;
 		//Todo : add your code here
-		if(am_pm==AmPm.pm && hours==12)
+		if(am_pm==AmPm.am && hours==12)
 			hours=0;
 
 		if(am_pm == AmPm.pm)
